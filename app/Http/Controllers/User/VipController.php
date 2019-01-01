@@ -53,5 +53,16 @@ class VipController extends Controller
 
         $rs = UserModel::where($where)->update($data);
         var_dump($rs);
+
+    }
+
+    /**
+     * 删除用户
+     * @param $uid
+     */
+    public function delete($uid)
+    {
+        $rs = UserModel::where(['uid'=>$uid])->delete();
+        var_dump($rs);
     }
 }
