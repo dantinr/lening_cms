@@ -16,9 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/user',function(){
-    echo 'User' ;
-});
+Route::get('/user','User\VipController@index');
 
 
 
