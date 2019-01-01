@@ -35,4 +35,23 @@ class VipController extends Controller
         $id = UserModel::insertGetId($data);
         echo 'Uid: '.$id;
     }
+
+
+    /**
+     * 更新
+     * 2019年1月1日23:09:06
+     */
+    public function update($uid)
+    {
+        $data = [
+            'email' => str_random(8).'@163.com'
+        ];
+
+        $where = [
+            'uid'   => $uid
+        ];
+
+        $rs = UserModel::where($where)->update($data);
+        var_dump($rs);
+    }
 }
