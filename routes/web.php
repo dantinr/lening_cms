@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 
 Route::get('/user','User\VipController@index');
+Route::get('/user/add','User\VipController@add');
+
 
 
 
